@@ -1,1 +1,1 @@
-# GPaperICO
+# PaperICO
