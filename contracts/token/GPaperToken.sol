@@ -7,5 +7,11 @@ contract GPaperToken is StandardToken{
 	string public name = 'GeniPaper Coin';
 	string public symbol = 'GPC';
 	uint8 public decimals = 18;
-	uint public INITIAL_SUPPLY; //TODO
+
+	// Initializes contract with initial supply tokens to the creator of the
+  // contract
+  constructor(uint256 initialSupply) public {
+    balances[msg.sender] = initialSupply;
+    //initial tokens
+  }
 }

@@ -16,6 +16,13 @@ contract BasicToken is ERC20Basic {
 
   uint256 totalSupply_;
 
+  // Initializes contract with initial supply tokens to the creator of the
+  // contract
+  constructor (uint256 initialSupply) public {
+    balances[msg.sender] = initialSupply;
+    //initial tokens
+  }
+
   /**
   * @dev total number of tokens in existence
   */
