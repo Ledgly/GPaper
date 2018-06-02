@@ -7,5 +7,10 @@ contract GPaperToken is StandardToken{
 	string public name = 'GeniPaper Coin';
 	string public symbol = 'GPC';
 	uint8 public decimals = 18;
-	uint public INITIAL_SUPPLY; //TODO
+
+	function GPaperToken(){
+		totalSupply_ = 10000;
+		balances[msg.sender] = totalSupply_;
+	}
+	//uint public INITIAL_SUPPLY; //TODO
 }
